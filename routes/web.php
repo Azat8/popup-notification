@@ -13,3 +13,4 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/statistic', 'IndexController@statistic');
+Route::get('/generate-iframe', 'IndexController@generateIframe');

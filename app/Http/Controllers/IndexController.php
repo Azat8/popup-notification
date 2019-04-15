@@ -10,8 +10,15 @@ class IndexController extends Controller
     {
         return view('form');
     }
+
     public function statistic()
     {
         return view('statistic');
+    }
+
+    public function generateIframe(Request $request)
+    {
+
+        return view('iframe');
     }
 }
