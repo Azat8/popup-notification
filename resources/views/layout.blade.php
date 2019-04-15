@@ -41,7 +41,7 @@
     $('#hideImg').hide();
     $('#iframeID').show();
     var site = $('#name-url').val();
-    document.getElementsByName('iFrameName')[0].src = site;
+    // document.getElementsByName('iFrameName')[0].src = site;
   });
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -49,6 +49,7 @@
 <script src="js/jscolor.js"></script>
 <script src="js/select2.js"></script>
 <script src="js/select2.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

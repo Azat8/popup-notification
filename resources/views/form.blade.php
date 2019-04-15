@@ -22,23 +22,23 @@
                             </div>
                         </div>
                         <div class="form-sec">
-                            <form action="" class="contactFormClass" id="form-third" method="post" name="sentMessage"
-                                  role="form">
+                            <form action="" class="contactFormClass" id="form-third"
+                                  role="form" enctype="multipart/form-data">
                                 <div>
                                     <div class="form-main-log clearfix">
 
                                         <div class="form-group">
-                                            <select class="form-control" id="interest" name="interest" required="">
+                                            <select class="form-control" id="notification-type" name="notification-type" required="">
                                                 <option disabled="disabled" selected="selected" value="">
                                                     Use previously used Popup
                                                 </option>
-                                                <option>
+                                                <option value="notification">
                                                     1
                                                 </option>
-                                                <option>
+                                                <option value="notification-countdown">
                                                     2
                                                 </option>
-                                                <option>
+                                                <option value="countdown">
                                                     3
                                                 </option>
                                             </select>
@@ -62,10 +62,11 @@
                                                         <p>Display a simple anncouncement to your</p>
                                                     </li>
                                                 </ul>
+                                                <input type="hidden" name="theme">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <select class="select-position js-states form-control" name="state">
+                                            <select class="select-position js-states form-control" name="position">
                                                 <option value=""></option>
                                                 <option value="btm-left">BOTTOM LEFT</option>
                                                 <option value="btm-right">BOTTOM RIGHT</option>
@@ -74,7 +75,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <select class="show-desktop-mobile js-states form-control" name="state">
+                                            <select class="show-desktop-mobile js-states form-control" name="platform">
                                                 <option value=""></option>
                                                 <option value="show-desktop">Show on Desktop</option>
                                                 <option value="show-mobile">Show on Mobile</option>
@@ -84,23 +85,23 @@
                                         <div class="form-group notification-replay">
                                             <div class="notification-replay-container">
                                                 <span>Show New Notification after every</span>
-                                                <input type="number">
+                                                <input type="number" name="notification-interval">
                                                 <span>second(s)</span>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="checkbox-inline"><input class="checkbox-1" type="checkbox" value="">restart when expire for the same number of days</label>
+                                            <label class="checkbox-inline"><input class="checkbox-1" name="restart" type="checkbox" value="">restart when expire for the same number of days</label>
                                         </div>
                                         <div class="form-group col-sm-4 padding-0">
                                             <div class="file-upload">
                                                 <label for="upload" class="file-upload__label">UPLOAD LOGO</label>
-                                                <input id="upload" class="file-upload__input" type="file" name="file-upload">
+                                                <input id="upload" class="file-upload__input" type="file" name="upload-logo">
                                             </div>
                                         </div>
                                         <div class="form-group col-sm-8 padding-0 upload-logo">
                                             <input class="form-control change"
                                                    data-validation-required-message="Please enter your name." id="name-url"
-                                                   name="name" placeholder="Enter Notification text..." required="" type="text">
+                                                   name="notification-text" placeholder="Enter Notification text..." required="" type="text">
                                             <!--<p class="help-block text-danger"></p>-->
                                             <div class="manual-notification">
                                                 <a data-toggle="modal" data-target="#myModal" href="javascript:;" class="plus-icon">&#43;</a>
@@ -110,17 +111,17 @@
                                         <div class="form-group col-sm-12 padding-0 color-picker">
                                             <div class="form-group  pick-color">
                                                 <label>Background Color</label>
-                                                <input class="jscolor" value="ffe900">
+                                                <input class="jscolor" name="background-color" value="ffe900">
 
                                             </div>
                                             <div class="form-group  pick-color">
                                                 <label>Text Color</label>
-                                                <input class="jscolor" value="000">
+                                                <input class="jscolor" name="text-color" value="000">
 
                                             </div>
                                             <div class="form-group  pick-color">
                                                 <label>Countdown Color</label>
-                                                <input class="jscolor" value="000">
+                                                <input class="jscolor" name="countdown-color" value="000">
 
                                             </div>
                                         </div>
