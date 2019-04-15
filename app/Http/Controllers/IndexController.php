@@ -10,4 +10,8 @@ class IndexController extends Controller
     {
         return view('form');
     }
+    public function statistic()
+    {
+        return view('statistic');
+    }
 }
