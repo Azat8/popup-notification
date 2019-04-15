@@ -142,7 +142,7 @@
                 <div class="col-md-7">
                     <div class="notification-type notification">
                         <div class="left-side">
-                            <div class="notification-image"></div>
+                            <div class="notification-image" style="background-image: url('img/i-icon-1.png')"></div>
                             <div class="notification-content">
                                 <p>4 people are looking this product now</p>
                             </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="notification-type notification">
                         <div class="left-side">
-                            <div class="notification-image"></div>
+                            <div class="notification-image" style="background-image: url('img/i-icon-1.png')"></div>
                             <div class="notification-content">
                                 <p>4 people are looking this product now</p>
                             </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="notification-type notification">
                         <div class="left-side">
-                            <div class="notification-image"></div>
+                            <div class="notification-image" style="background-image: url('img/i-icon-1.png')"></div>
                             <div class="notification-content">
                                 <p>4 people are looking this product now</p>
                             </div>

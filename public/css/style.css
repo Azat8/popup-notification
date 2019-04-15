@@ -687,12 +687,12 @@ ul.dropdown-list img {
 .notification-type > .left-side > .notification-image {
     width: 65px;
     height: 65px;
-    background-image: url('../img/i-icon-1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
-    margin-top: 13px;
+    left: 12px;
+    top: 16px;
 }
 .notification-type > .left-side > .notification-close-icon {
     width: 15px;
