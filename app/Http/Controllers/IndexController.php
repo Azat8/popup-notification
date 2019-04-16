@@ -18,7 +18,7 @@ class IndexController extends Controller
 
     public function generateIframe(Request $request)
     {
-
+        dd($request->all());
         return view('iframe');
     }
 }

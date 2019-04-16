@@ -22,11 +22,9 @@
                             </div>
                         </div>
                         <div class="form-sec">
-                            <form action="" class="contactFormClass" id="form-third" method="post" name="sentMessage"
-                                  role="form">
+                            <form action="" class="contactFormClass" id="form-third" name="sentMessage" role="form">
                                 <div>
                                     <div class="form-main-log clearfix">
-
                                         <div class="form-group">
                                             <select class="form-control" id="interest" name="interest" required="">
                                                 <option disabled="disabled" selected="selected" value="">
