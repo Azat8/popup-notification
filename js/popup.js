@@ -4611,7 +4611,8 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
     text: '4 people are looking this product now @@@@@@@',
     by: 'Cool designer',
     image:"http://notification.loc/img/mr-been.jpg",
-    countdown: '27-11-2020 08:30:00'
+    countdown: '27-11-2020 08:30:00',
+    position: 'bottom-left'
   };
 
   var markup = '<div class="notification-type notification notification-1 notification-notification">\n' +
@@ -4705,6 +4706,7 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
       var $popup = document.querySelectorAll('#'+wrapperId + ' ' + obj.type)[0];
       $popup.style.display = 'block';
       $popup.classList.add(obj.theme);
+      $popup.classList.add(obj.position);
       $popup.querySelectorAll('.notification-content p')[0].innerText = (obj.text);
       $popup.querySelectorAll('.notification-name span')[0].innerText = (obj.by);
       $popup.querySelectorAll('.notification-image')[0].style['background-image'] = 'url('+obj.image+')';
