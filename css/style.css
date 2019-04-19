@@ -1406,7 +1406,11 @@ ul.dropdown-list img {
     position: relative;
 
 }
-
+.notification-1 > .left-side > .notification-close-icon,
+.notification-2 > .left-side > .notification-close-icon,
+.notification-3 > .left-side > .notification-close-icon{
+    cursor: pointer;
+}
 
 
 @media only screen and (max-width: 1570px) {
