@@ -34,6 +34,10 @@ $(document).ready(function () {
     $('.notification-container').slideToggle();
   });
 
+  $('.datepicker-dropdown-button').on('click', function () {
+    $('.datepicker').slideToggle();
+  });
+
   $('.right-side a').on('click', function () {
     let currentVal = $(this).attr('data-value');
     let drophtml = $('.dropdown-button').text(currentVal);
