@@ -4601,8 +4601,25 @@
 
 })));
 
+var siteUrl = 'http://notification.loc'; // Set your site url
 
-var stylesheetUrl = 'http://notification.loc/css/style.css';
+var stylesheetUrl = siteUrl + '/css/style.css';
+
+  /*
+  * obj: Object
+  * must came from API
+  * available options
+  * {
+  *    expire: boolean,
+  *    theme: string, // 'border-radius-theme', 'new-year-theme', 'yellow-theme',
+  *    type: string, // '.notification-notification', '.notification-notification-countdown', '.notification-countdown',
+  *    text: string,
+  *    by: string,
+  *    image: string // image url,
+  *    countdown: string // '27-11-2020 08:30:00',
+  *    position: string // 'top-right', 'top-left', 'bottom-right', 'bottom-left'
+  * }
+  * */
 
   var obj = {
     expire: false,
@@ -4610,14 +4627,14 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
     type: '.notification-notification-countdown',
     text: '4 people are looking this product now @@@@@@@',
     by: 'Cool designer',
-    image:"http://notification.loc/img/mr-been.jpg",
+    image: siteUrl + "/img/mr-been.jpg",
     countdown: '27-11-2020 08:30:00',
     position: 'top-right'
   };
 
   var markup = '<div class="notification-type notification notification-1 notification-notification">\n' +
       '        <div class="left-side">\n' +
-      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-image" style="background-image: url()"></div>\n' +
       '            <div class="notification-content">\n' +
       '                <p>4 people are looking this product now</p>\n' +
       '            </div>\n' +
@@ -4632,7 +4649,7 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
       '    </div>\n' +
       '    <div class="notification-type notification notification-2 notification-notification-countdown">\n' +
       '        <div class="left-side">\n' +
-      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-image" style="background-image: url()"></div>\n' +
       '            <div class="notification-content">\n' +
       '                <p>4 people are looking this product now</p>\n' +
       '            </div>\n' +
@@ -4662,7 +4679,7 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
       '    </div>\n' +
       '    <div class="notification-type notification notification-3 notification-countdown">\n' +
       '        <div class="left-side">\n' +
-      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-image" style="background-image: url()"></div>\n' +
       '            <div class="notification-close-icon"></div>\n' +
       '            <div class="notification-name">\n' +
       '                <p>by <span>FomoTank</span></p>\n' +
