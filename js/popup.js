@@ -4606,13 +4606,13 @@ var stylesheetUrl = 'http://notification.loc/css/style.css';
 
   var obj = {
     expire: false,
-    theme: 'new-year-theme',
+    theme: 'border-radius-theme',
     type: '.notification-notification-countdown',
     text: '4 people are looking this product now @@@@@@@',
     by: 'Cool designer',
     image:"http://notification.loc/img/mr-been.jpg",
     countdown: '27-11-2020 08:30:00',
-    position: 'bottom-left'
+    position: 'top-right'
   };
 
   var markup = '<div class="notification-type notification notification-1 notification-notification">\n' +
