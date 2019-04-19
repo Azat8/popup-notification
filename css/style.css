@@ -121,6 +121,7 @@
 
 .website {
     margin-top: 26px;
+    position: relative;
 }
 
 .website2 {
@@ -368,14 +369,13 @@ button.btn.chng-clr:hover {
 
 .dropdown > span {
     padding: 14px 10px 0 20px;
-    font-size: 16px;
+    font-size: 15px;
     background-color: transparent;
-    color: #a9a9a9;
+    color: #999;
     display: block;
     border-radius: 3px;
     border: 1px solid #e0e6ed;
     box-shadow: none !important;
-    color: #7f7f7f;
     height: 50px;
 }
 
@@ -659,6 +659,7 @@ ul.dropdown-list img {
 
 .modal-content {
     text-align: center;
+    padding: 10px 0 25px;
 }
 .modal-content .info-container {
     height: 400px;
@@ -844,13 +845,15 @@ ul.dropdown-list img {
 }
 
 .notification-type > .left-side > .notification-content {
-    top: 22px;
+    top: 17px;
     left: 92px;
     font-size: 18px;
 }
 
 .notification-type > .left-side > .notification-content > p {
     line-height: 1.1;
+    margin: 0;
+    overflow: hidden;
 }
 
 .notification-type > .left-side > .notification-image {
@@ -1282,6 +1285,37 @@ ul.dropdown-list img {
 .textarea1 {
     display: none;
 }
+.generated-code-container {
+    width: 80%;
+    margin: auto;
+}
+.generated-code-area .textarea3 {
+    border-radius: 10px;
+    margin-top: 40px;
+    height: 150px;
+}
+.generated-code-container > .btn {
+    outline: none!important;
+    background-color: #fbbc61;
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+    border-radius: 50px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 10px 38px;
+}
+.generated-code-container > .btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.generated-code-container > .btn.focus,
+.generated-code-container > .btn.hover{
+    outline: none!important;
+}
 
 /*generate code*/
 
@@ -1316,7 +1350,7 @@ ul.dropdown-list img {
 /*yellow-theme*/
 
 .yellow-theme .left-side {
-    background-color: #fec90f;
+    background-color: #fec90f!important;
 }
 
 /*border-radius-theme*/
@@ -1349,7 +1383,7 @@ ul.dropdown-list img {
 /*new-year-theme*/
 
 .new-year-theme .left-side {
-    background-image: url("../img/new-year.jpg");
+    background-image: url("../img/new-year.jpg")!important;
 }
 .new-year-theme .left-side .notification-content > p {
     color: white;
@@ -1400,16 +1434,26 @@ ul.dropdown-list img {
 .notification-3 .left-side{
     border-left: none!important;
     box-shadow: 1px 1px 7px #dad5d5;
+    background-color: white;
 }
 
 .watch-container {
     position: relative;
+    /*background-image: url("../img/browser.png");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 47%;
 
 }
 .notification-1 > .left-side > .notification-close-icon,
 .notification-2 > .left-side > .notification-close-icon,
 .notification-3 > .left-side > .notification-close-icon{
     cursor: pointer;
+}
+
+.datepicker {
+    display: none;
 }
 
 
@@ -1431,6 +1475,20 @@ ul.dropdown-list img {
         width: 430px;
     }
 }
+@media only screen and (max-width: 1024px) {
+    .watch-container {
+        padding-bottom: 41%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .shadow {
+         padding-bottom: 0;
+    }
+    .watch-container {
+        padding-bottom: 82%;
+    }
+}
 
 @media (min-width: 768px) {
     .modal-dialog {
@@ -1443,5 +1501,11 @@ ul.dropdown-list img {
     .table-responsive {
         overflow-y: auto;
     }
+}
 
+@media screen and (max-width: 500px) {
+    .notification-1, .notification-2, .notification-3 {
+        top: 86px;
+        left: 8%;
+    }
 }
