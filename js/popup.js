@@ -1,35 +1,125 @@
-$(document).ready(function () {
+  var stylesheetUrl = 'css/style.css';
 
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  var obj = {
+    expire: false,
+    theme: 'new-year-theme',
+    type: '.notification-notification-countdown',
+    text: '4 people are looking this product now @@@@@@@',
+    by: 'Cool designer',
+    image:"img/mr-been.jpg",
+    countdown: '27-11-2020 08:30:00'
+  };
+
+  var markup = '<div class="notification-type notification notification-1 notification-notification">\n' +
+      '        <div class="left-side">\n' +
+      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-content">\n' +
+      '                <p>4 people are looking this product now</p>\n' +
+      '            </div>\n' +
+      '            <div class="notification-close-icon"></div>\n' +
+      '            <div class="notification-name">\n' +
+      '                <p>by <span>FomoTank</span></p>\n' +
+      '            </div>\n' +
+      '            <div class="about">\n' +
+      '                <h1>about 1 hour ago</h1>\n' +
+      '            </div>\n' +
+      '        </div>\n' +
+      '    </div>\n' +
+      '    <div class="notification-type notification notification-2 notification-notification-countdown">\n' +
+      '        <div class="left-side">\n' +
+      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-content">\n' +
+      '                <p>4 people are looking this product now</p>\n' +
+      '            </div>\n' +
+      '            <div class="notification-close-icon"></div>\n' +
+      '            <div class="notification-name">\n' +
+      '                <p>by <span>FomoTank</span></p>\n' +
+      '            </div>\n' +
+      '            <div class="days-hours small-size">\n' +
+      '                <ul>\n' +
+      '                    <li class="days">00</li>\n' +
+      '                    <li>Days</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="hrs">00</li>\n' +
+      '                    <li>Hrs</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="mins">00</li>\n' +
+      '                    <li>Mins</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="secs">00</li>\n' +
+      '                    <li>Secs</li>\n' +
+      '                </ul>\n' +
+      '            </div>\n' +
+      '        </div>\n' +
+      '    </div>\n' +
+      '    <div class="notification-type notification notification-3 notification-countdown">\n' +
+      '        <div class="left-side">\n' +
+      '            <div class="notification-image" style="background-image: url(\'img/mr-been.jpg\')"></div>\n' +
+      '            <div class="notification-close-icon"></div>\n' +
+      '            <div class="notification-name">\n' +
+      '                <p>by <span>FomoTank</span></p>\n' +
+      '            </div>\n' +
+      '            <div class="days-hours big-size">\n' +
+      '                <ul>\n' +
+      '                    <li class="days">00</li>\n' +
+      '                    <li>Days</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="hrs">00</li>\n' +
+      '                    <li>Hrs</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="mins">00</li>\n' +
+      '                    <li>Mins</li>\n' +
+      '                </ul>\n' +
+      '                <ul>\n' +
+      '                    <li class="secs">00</li>\n' +
+      '                    <li>Secs</li>\n' +
+      '                </ul>\n' +
+      '            </div>\n' +
+      '        </div>\n' +
+      '    </div>';
+
+  window.onload = function() {
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = stylesheetUrl;
+    document.head.appendChild(link);
+    console.log(link);
+
+    var wrapperId = 'notification_popup';
+    var $wrapper = document.createElement('div');
+    $wrapper.setAttribute('id', wrapperId);
+    document.body.appendChild($wrapper);
+    var wr = document.getElementById(wrapperId);
+    wr.innerHTML = markup;
+
+    if(!obj.expire) {
+      var $popup = document.querySelectorAll('#'+wrapperId + ' ' + obj.type)[0];
+      console.log($popup);
+      $popup.style.display = 'block';
+      $popup.classList.add(obj.theme);
+      $popup.querySelectorAll('.notification-content p')[0].innerText = (obj.text);
+      $popup.querySelectorAll('.notification-name span')[0].innerText = (obj.by);
+      $popup.querySelectorAll('.notification-image')[0].style['background-image'] = 'url('+obj.image+')';
+
+      $popup.querySelectorAll('.notification-close-icon')[0].addEventListener('click', function () {
+        $popup.style.display = 'none';
+      });
+
+      if (obj.hasOwnProperty('countdown')) {
+        countdown(obj.countdown, $popup);
+      }
     }
-  });
+  };
 
-  $(".generate-code-button").click(function (e) {
-    e.preventDefault();
-    let url = '/generate-iframe?' + $("#form-third").serialize();
-
-    $.ajax({
-      url: url,
-      method: "get",
-      success: function (res) {
-        console.log(res);
-      },
-      error: function (error) {
-        console.log(error);
-      },
-
-    }).done(function () {
-      console.log("done");
-    });
-
-  });
-
-  function countdown(date) {
+  function countdown(date, $obj) {
     console.log(date);
-    var $clock = $('#clock'),
-        eventTime = moment(date, 'DD-MM-YYYY HH:mm:ss').unix(),
+    var eventTime = moment(date, 'DD-MM-YYYY HH:mm:ss').unix(),
         currentTime = moment().unix(),
         diffTime = eventTime - currentTime,
         duration = moment.duration(diffTime * 1000, 'milliseconds'),
@@ -41,12 +131,10 @@ $(document).ready(function () {
       // Show clock
       // $clock.show();
 
-      var $d = $('.days')/*.appendTo($clock)*/,
-          $h = $('.hrs')/*.appendTo($clock)*/,
-          $m = $('.mins')/*.appendTo($clock)*/,
-          $s = $('.secs')/*.appendTo($clock)*/;
-
-      console.log($clock);
+      var $d = $obj.querySelectorAll('.days')[0],
+          $h = $obj.querySelectorAll('.hrs')[0],
+          $m = $obj.querySelectorAll('.mins')[0],
+          $s = $obj.querySelectorAll('.secs')[0];
 
       setInterval(function(){
 
@@ -55,48 +143,20 @@ $(document).ready(function () {
             h = moment.duration(duration).hours(),
             m = moment.duration(duration).minutes(),
             s = moment.duration(duration).seconds();
-
-        d = $.trim(d).length === 1 ? '0' + d : d;
-        h = $.trim(h).length === 1 ? '0' + h : h;
-        m = $.trim(m).length === 1 ? '0' + m : m;
-        s = $.trim(s).length === 1 ? '0' + s : s;
+        // console.log((d));
+        d = (d).toString().trim().length === 1 ? '0' + d : d;
+        h = (h).toString().trim().length === 1 ? '0' + h : h;
+        m = (m).toString().trim().length === 1 ? '0' + m : m;
+        s = (s).toString().trim().length === 1 ? '0' + s : s;
 
         // show how many hours, minutes and seconds are left
-        $d.text(d);
-        $h.text(h);
-        $m.text(m);
-        $s.text(s);
+        $d.innerText = (d);
+        $h.innerText = (h);
+        $m.innerText = (m);
+        $s.innerText = (s);
 
       }, interval);
 
     }
   }
-
-  var obj = {
-      expire: false,
-      theme: 'new-year-theme',
-      type: '.notification-notification-countdown',
-      text: '4 people are looking this product now!!!!!!!',
-      by: 'Cool designer',
-      image:"img/mr-been.jpg",
-      countdown: '27-11-2020 08:30:00'
-  };
-
-  if(!obj.expire) {
-    var $popup = $(obj.type);
-    $popup.slideDown();
-    $popup.addClass(obj.theme);
-    $popup.find('.notification-content p').text(obj.text);
-    $popup.find('.notification-name span').text(obj.by);
-    $popup.find('.notification-image').css('background-image', 'url('+obj.image+')');
-
-    $('.notification-close-icon').on('click',function () {
-      $popup.slideUp();
-    });
-
-    if (obj.hasOwnProperty('countdown')) {
-      countdown(obj.countdown);
-    }
-  }
-});
 
