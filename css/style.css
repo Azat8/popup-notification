@@ -1403,20 +1403,12 @@ ul.dropdown-list img {
 .new-year-theme > .left-side > .days-hours > ul:last-child > li:first-child {
     color: white;
 }
-/*.new-year-theme > .left-side > .days-hours.big-size > ul:not(:last-child):before {*/
-    /*content: '';*/
-    /*background-image: url(../img/);*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*width: 21px;*/
-    /*height: 9px;*/
-    /*position: absolute;*/
-    /*top: 10%;*/
-    /*right: -36%;*/
-/*}*/
 
 /*notification show*/
+.bottom-left {
+    left: 20px!important;
+    top: 20px!important;
+}
 
 .notification-1,
 .notification-2,
