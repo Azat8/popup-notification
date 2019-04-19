@@ -1450,6 +1450,13 @@ ul.dropdown-list img {
     display: none;
 }
 
+.notification-popup > .notification-1,
+.notification-popup > .notification-2,
+.notification-popup > .notification-3{
+    position: fixed;
+    top: unset;
+    left: unset;
+}
 
 @media only screen and (max-width: 1570px) {
 
