@@ -1450,9 +1450,9 @@ ul.dropdown-list img {
     display: none;
 }
 
-.notification-popup > .notification-1,
-.notification-popup > .notification-2,
-.notification-popup > .notification-3{
+.notification_popup > .notification-1,
+.notification_popup > .notification-2,
+.notification_popup > .notification-3{
     position: fixed;
     top: unset;
     left: unset;
