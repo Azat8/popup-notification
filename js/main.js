@@ -108,10 +108,24 @@ $(document).ready(function () {
 
   });
 
+  let positionClasses = [
+      'top-right',
+      'top-left',
+      'bottom-left',
+      'bottom-right'
+  ];
 
   $('.select-position').on('change',function () {
-    let data = $('.select-position option:selected').text();
-    console.log(data);
+    let data = $('.select-position option:selected').attr('value');
+    let $notification = $('.notification');
+
+    for(let i = 0; i < positionClasses.length; i++) {
+      if($notification.hasClass(positionClasses[i])) {
+        $notification.removeClass(positionClasses[i]);
+      }
+    }
+
+    $notification.addClass(data);
   });
 
 });

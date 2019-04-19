@@ -1406,30 +1406,58 @@ ul.dropdown-list img {
 }
 
 /*notification show*/
-.bottom-left {
+#notification_popup .bottom-left {
     position: fixed!important;
     left: 20px!important;
     bottom: 20px!important;
     z-index: 9999;
 }
-.bottom-right {
+#notification_popup .bottom-right {
     position: fixed!important;
     right: 75px!important;
     bottom: 20px!important;
     z-index: 9999;
 }
-.top-left {
+#notification_popup .top-left {
     position: fixed!important;
     left: 20px!important;
     top: 20px!important;
     z-index: 9999;
 }
-.top-right {
+#notification_popup .top-right {
     position: fixed!important;
     right: 75px!important;
     top: 20px!important;
     z-index: 9999;
 }
+
+
+.notification-position.bottom-left {
+    position: absolute!important;
+    left: 20px!important;
+    bottom: 6px!important;
+    z-index: 9999;
+}
+.notification-position.bottom-right {
+    position: absolute!important;
+    right: 5px!important;
+    bottom: 5px!important;
+    z-index: 9999;
+}
+.notification-position.top-left {
+    position: absolute!important;
+    left: 12px!important;
+    top: 11px!important;
+    z-index: 9999;
+}
+.notification-position.top-right {
+    position: absolute!important;
+    right: 7px!important;
+    top: 10px!important;
+    z-index: 9999;
+}
+
+
 
 .notification-1,
 .notification-2,
@@ -1473,6 +1501,13 @@ ul.dropdown-list img {
 #notification_popup > .notification-2,
 #notification_popup > .notification-3{
     position: fixed;
+    top: unset;
+    left: unset;
+}
+
+.notification-position.notification-1,
+.notification-position.notification-2,
+.notification-position.notification-3{
     top: unset;
     left: unset;
 }
