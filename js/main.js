@@ -128,5 +128,11 @@ $(document).ready(function () {
     $notification.addClass(data);
   });
 
+  $('.copy-button').on('click', function () {
+    var el = $('.textarea3');
+    el.select();
+    document.execCommand('copy');
+  });
+  
 });
 
