@@ -38,8 +38,8 @@ $(document).ready(function () {
     $('.datepicker').slideToggle();
   });
 
-  $('.right-side a').on('click', function () {
-    let currentVal = $(this).attr('data-value');
+  $('.notification-type').on('click', function () {
+    let currentVal = $(this).find('a').attr('data-value');
     let drophtml = $('.dropdown-button').text(currentVal);
     $('.notification-type-container').slideUp();
     let currenttype = $('.currentType').val(currentVal);
@@ -51,18 +51,21 @@ $(document).ready(function () {
       });
       $('.notification-3').slideUp(0);
       $('.notification-2').slideUp(0);
+      $('.count-down-hide').slideUp();
     } else if (currentVal === "notification-countdown") {
       $('.notification-2').css({
         display: 'flex'
       });
       $('.notification-1').slideUp(0);
       $('.notification-3').slideUp(0);
+      $('.count-down-hide').slideDown();
     } else if (currentVal === "countdown") {
       $('.notification-3').css({
         display: 'flex'
       });
       $('.notification-1').slideUp(0);
       $('.notification-2').slideUp(0);
+      $('.count-down-hide').slideDown();
     }
   });
 
@@ -81,8 +84,8 @@ $(document).ready(function () {
 
 //
 
-  $('.notification-theme .right-side a').on('click',function () {
-    let current = $(this).data('for');
+  $('.notification-theme').on('click',function () {
+    let current = $(this).find("a").data('for');
 
     let drophtml = $('.notification-dropdown-button').text(current);
     $('.notification-container').slideUp();
@@ -133,6 +136,32 @@ $(document).ready(function () {
     el.select();
     document.execCommand('copy');
   });
+
+   // function returnColor(){
+   //   let backgroundColor = $('.jscolor').val();
+   //   let textColor = $('.jscolor').val();
+   //   let countDownColor = $('.jscolor').val();
+   //
+   //
+   // }
+   //
+   // returnColor();
+
+  $('.background-color').on('change',function () {
+   let color = $('.background-color').val();
+   $('.notification-changes .left-side').css("background-color",'#' + color );
+  });
+  $('.text-color').on('change',function () {
+    let color = $('.text-color').val();
+    $('.notification-text p').css("color",'#' + color );
+  });
+  $('.countdown-color').on('change',function () {
+    let color = $('.countdown-color').val();
+    $('.days-hours-changes ul li').css("color",'#' + color );
+  });
+
+
+
   
 });
 

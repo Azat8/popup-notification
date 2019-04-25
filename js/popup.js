@@ -4618,6 +4618,9 @@ var stylesheetUrl = siteUrl + '/css/style.css';
   *    image: string // image url,
   *    countdown: string // '27-11-2020 08:30:00',
   *    position: string // 'top-right', 'top-left', 'bottom-right', 'bottom-left'
+  *    backgroundColor: string,
+  *    textColor: string,
+  *    countDownColor: string,
   * }
   * */
 
@@ -4629,13 +4632,16 @@ var stylesheetUrl = siteUrl + '/css/style.css';
     by: 'Cool designer',
     image: siteUrl + "/img/mr-been.jpg",
     countdown: '27-11-2020 08:30:00',
-    position: 'top-right'
+    position: 'top-right',
+    backgroundColor: '#000',
+    textColor: '#26B622',
+    countDownColor: '#EE4423',
   };
 
-  var markup = '<div class="notification-type notification notification-1 notification-notification">\n' +
+  var markup = '<div class="notification-type notification-changes notification notification-1 notification-notification">\n' +
       '        <div class="left-side">\n' +
       '            <div class="notification-image" style="background-image: url()"></div>\n' +
-      '            <div class="notification-content">\n' +
+      '            <div class="notification-content notification-text">\n' +
       '                <p>4 people are looking this product now</p>\n' +
       '            </div>\n' +
       '            <div class="notification-close-icon"></div>\n' +
@@ -4647,17 +4653,17 @@ var stylesheetUrl = siteUrl + '/css/style.css';
       '            </div>\n' +
       '        </div>\n' +
       '    </div>\n' +
-      '    <div class="notification-type notification notification-2 notification-notification-countdown">\n' +
+      '    <div class="notification-type notification-changes notification notification-2 notification-notification-countdown">\n' +
       '        <div class="left-side">\n' +
       '            <div class="notification-image" style="background-image: url()"></div>\n' +
-      '            <div class="notification-content">\n' +
+      '            <div class="notification-content notification-text">\n' +
       '                <p>4 people are looking this product now</p>\n' +
       '            </div>\n' +
       '            <div class="notification-close-icon"></div>\n' +
       '            <div class="notification-name">\n' +
       '                <p>by <span>FomoTank</span></p>\n' +
       '            </div>\n' +
-      '            <div class="days-hours small-size">\n' +
+      '            <div class="days-hours days-hours-changes small-size">\n' +
       '                <ul>\n' +
       '                    <li class="days">00</li>\n' +
       '                    <li>Days</li>\n' +
@@ -4677,14 +4683,14 @@ var stylesheetUrl = siteUrl + '/css/style.css';
       '            </div>\n' +
       '        </div>\n' +
       '    </div>\n' +
-      '    <div class="notification-type notification notification-3 notification-countdown">\n' +
+      '    <div class="notification-type notification-changes notification notification-3 notification-countdown">\n' +
       '        <div class="left-side">\n' +
       '            <div class="notification-image" style="background-image: url()"></div>\n' +
       '            <div class="notification-close-icon"></div>\n' +
       '            <div class="notification-name">\n' +
       '                <p>by <span>FomoTank</span></p>\n' +
       '            </div>\n' +
-      '            <div class="days-hours big-size">\n' +
+      '            <div class="days-hours days-hours-changes big-size">\n' +
       '                <ul>\n' +
       '                    <li class="days">00</li>\n' +
       '                    <li>Days</li>\n' +
@@ -4727,6 +4733,9 @@ var stylesheetUrl = siteUrl + '/css/style.css';
       $popup.querySelectorAll('.notification-content p')[0].innerText = (obj.text);
       $popup.querySelectorAll('.notification-name span')[0].innerText = (obj.by);
       $popup.querySelectorAll('.notification-image')[0].style['background-image'] = 'url('+obj.image+')';
+      $popup.querySelectorAll('.notification-changes .left-side')[0].style['background-color'] = obj.backgroundColor;
+      $popup.querySelectorAll('.notification-text p')[0].style.color = obj.textColor;
+      $popup.querySelectorAll('.days-hours-changes ul li')[0].style.color = obj.countDownColor;
 
       $popup.querySelectorAll('.notification-close-icon')[0].addEventListener('click', function () {
         $popup.style.display = 'none';

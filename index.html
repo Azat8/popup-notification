@@ -208,7 +208,7 @@
                                             <span>second(s)</span>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group count-down-hide">
                                         <div class="dropdown">
                                             <span class="datepicker-dropdown-button">Set Count Down and Date</span>
                                             <div class="datepicker" style="overflow:hidden;">
@@ -236,10 +236,11 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-8 padding-0 upload-logo">
-                                        <input class="form-control change"
-                                               data-validation-required-message="Please enter your name." id="name-url"
-                                               name="notification-text" placeholder="Enter Notification text..." required="" type="text">
+                                        <!--<input class="form-control change"-->
+                                               <!--data-validation-required-message="Please enter your name." id="name-url"-->
+                                               <!--name="notification-text" placeholder="Enter Notification text..." required="" type="text">-->
                                         <!--<p class="help-block text-danger"></p>-->
+                                        <a data-toggle="modal" data-target="#myModal" href="javascript:;" class="generate-code-button">Enter notification text</a>
                                         <div class="manual-notification">
                                             <a data-toggle="modal" data-target="#myModal" href="javascript:;" class="plus-icon">&#43;</a>
                                             <p>Add <br> Manual <br> Notific...</p>
@@ -265,17 +266,17 @@
                                     <div class="form-group col-sm-12 padding-0 color-picker">
                                         <div class="form-group  pick-color">
                                             <label>Background Color</label>
-                                            <input class="jscolor" name="background-color" value="ffe900">
+                                            <input class="jscolor background-color" name="background-color" value="ffe900">
 
                                         </div>
                                         <div class="form-group  pick-color">
                                             <label>Text Color</label>
-                                            <input class="jscolor" name="text-color" value="000">
+                                            <input class="jscolor text-color" name="text-color" value="000">
 
                                         </div>
                                         <div class="form-group  pick-color">
                                             <label>Countdown Color</label>
-                                            <input class="jscolor" name="countdown-color" value="000">
+                                            <input class="jscolor countdown-color" name="countdown-color" value="000">
 
                                         </div>
                                     </div>
@@ -300,10 +301,10 @@
             <!--<iframe height="619" id="iframeID" name="iFrameName" style="display: none;" width="760px"></iframe>-->
             <!--</div>-->
             <div class="col-md-6 col-lg-7 watch-container clearfix" style="background-image: url('img/browser.png')">
-                    <div class="notification-position notification-type notification notification-1">
+                    <div class="notification-position notification-changes notification-type notification notification-1">
                         <div class="left-side">
                             <div class="notification-image" style="background-image: url('img/mr-been.jpg')"></div>
-                            <div class="notification-content">
+                            <div class="notification-content notification-text">
                                 <p>4 people are looking this product now</p>
                             </div>
                             <div class="notification-close-icon"></div>
@@ -318,17 +319,17 @@
                         <!--<a href="javascript:;">Notification</a>-->
                         <!--</div>-->
                     </div>
-                    <div class="notification-position notification-type notification notification-2">
+                    <div class="notification-position notification-changes notification-type notification notification-2">
                         <div class="left-side">
                             <div class="notification-image" style="background-image: url('img/mr-been.jpg')"></div>
-                            <div class="notification-content">
+                            <div class="notification-content notification-text">
                                 <p>4 people are looking this product now</p>
                             </div>
                             <div class="notification-close-icon"></div>
                             <div class="notification-name">
                                 <p>by <span>FomoTank</span></p>
                             </div>
-                            <div class="days-hours small-size">
+                            <div class="days-hours days-hours-changes  small-size">
                                 <ul>
                                     <li>02</li>
                                     <li>Days</li>
@@ -351,14 +352,14 @@
                         <!--<a href="javascript:;">Notification & countdown </a>-->
                         <!--</div>-->
                     </div>
-                    <div class="notification-position notification-type notification notification-3">
+                    <div class="notification-position notification-changes notification-type notification notification-3">
                         <div class="left-side">
                             <div class="notification-image" style="background-image: url('img/mr-been.jpg')"></div>
                             <div class="notification-close-icon"></div>
                             <div class="notification-name">
                                 <p>by <span>FomoTank</span></p>
                             </div>
-                            <div class="days-hours big-size">
+                            <div class="days-hours days-hours-changes big-size">
                                 <ul>
                                     <li>02</li>
                                     <li>Days</li>
