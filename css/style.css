@@ -1420,6 +1420,16 @@ body .yellow-theme .left-side {
     color: white;
 }
 
+
+/*no theme*/
+
+.no-theme p {
+    width: 90%;
+}
+.no-theme p:after{
+    top: 0;
+    left: 3px;
+}
 /*notification show*/
 #notification_popup .bottom-left {
     position: fixed!important;

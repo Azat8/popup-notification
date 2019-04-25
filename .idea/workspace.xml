@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcef6774-fd81-4a62-b3b7-1d9f1d48516b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +14,14 @@
     <session id="-1704233948">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="464" />
+          <entry key="css" value="519" />
           <entry key="html" value="715" />
           <entry key="js" value="2218" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="464" />
+          <entry key="CSS" value="519" />
           <entry key="HTML" value="715" />
           <entry key="JavaScript" value="2218" />
         </counts>
@@ -99,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/popup.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
@@ -136,11 +136,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="903" column="4" selection-start-line="903" selection-start-column="4" selection-end-line="904" selection-end-column="16" />
+            <state relative-caret-position="388">
+              <caret line="1429" column="10" selection-start-line="1429" selection-start-column="10" selection-end-line="1429" selection-end-column="10" />
+              <folding>
+                <element signature="e#26425#26528#0" />
+                <element signature="e#26586#26621#0" />
+                <element signature="e#26673#26710#0" />
+                <element signature="e#26763#26978#0" />
+                <element signature="e#27027#27090#0" />
+                <element signature="e#27144#27165#0" />
+                <element signature="e#27223#27254#0" />
+                <element signature="e#27306#27337#0" />
+                <element signature="e#27377#27398#0" />
+                <element signature="e#27438#27459#0" />
+                <element signature="e#27536#27557#0" />
+                <element signature="e#27614#27721#0" />
+                <element signature="e#27756#27864#0" />
+                <element signature="e#27895#27999#0" />
+                <element signature="e#28031#28136#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,8 +222,8 @@
         <option value="$PROJECT_DIR$/popup.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/popup.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -392,12 +409,12 @@
       <workItem from="1555682850660" duration="620000" />
       <workItem from="1555937620069" duration="1046000" />
       <workItem from="1556173832851" duration="1183000" />
-      <workItem from="1556188200250" duration="4966000" />
+      <workItem from="1556188200250" duration="5205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28349000" />
+    <option name="totallyTimeSpent" value="28588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -416,7 +433,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5175202" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.19272237" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -528,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="903" column="4" selection-start-line="903" selection-start-column="4" selection-end-line="904" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/popup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -544,6 +554,30 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#!!block;n#countdown#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="1429" column="10" selection-start-line="1429" selection-start-column="10" selection-end-line="1429" selection-end-column="10" />
+          <folding>
+            <element signature="e#26425#26528#0" />
+            <element signature="e#26586#26621#0" />
+            <element signature="e#26673#26710#0" />
+            <element signature="e#26763#26978#0" />
+            <element signature="e#27027#27090#0" />
+            <element signature="e#27144#27165#0" />
+            <element signature="e#27223#27254#0" />
+            <element signature="e#27306#27337#0" />
+            <element signature="e#27377#27398#0" />
+            <element signature="e#27438#27459#0" />
+            <element signature="e#27536#27557#0" />
+            <element signature="e#27614#27721#0" />
+            <element signature="e#27756#27864#0" />
+            <element signature="e#27895#27999#0" />
+            <element signature="e#28031#28136#0" />
           </folding>
         </state>
       </provider>
