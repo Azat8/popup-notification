@@ -157,7 +157,7 @@ $(document).ready(function () {
   });
   $('.countdown-color').on('change',function () {
     let color = $('.countdown-color').val();
-    $('.days-hours-changes ul').css("color",'#' + color );
+    $('.days-hours-changes').css("color",'#' + color );
   });
 
 
