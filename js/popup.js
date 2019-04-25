@@ -4626,7 +4626,7 @@ var stylesheetUrl = siteUrl + '/css/style.css';
 
   var obj = {
     expire: false,
-    theme: '',
+    theme: 'no-theme',
     type: '.notification-notification-countdown',
     text: '4 people are looking this product now @@@@@@@',
     by: 'Cool designer',
