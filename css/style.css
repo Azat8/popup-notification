@@ -1427,8 +1427,8 @@ body .yellow-theme .left-side {
     padding: 0 3px;
 }
 .no-theme p:after{
-    top: 0;
-    left: 3px;
+    top: 0!important;
+    left: 3px!important;
 }
 /*notification show*/
 #notification_popup .bottom-left {
