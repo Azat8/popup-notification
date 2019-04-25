@@ -4735,7 +4735,7 @@ var stylesheetUrl = siteUrl + '/css/style.css';
       $popup.querySelectorAll('.notification-image')[0].style['background-image'] = 'url('+obj.image+')';
       $popup.querySelectorAll('.notification-changes .left-side')[0].style['background-color'] = obj.backgroundColor;
       $popup.querySelectorAll('.notification-text p')[0].style.color = obj.textColor;
-      $popup.querySelectorAll('.days-hours-changes ul li')[0].style.color = obj.countDownColor;
+      $popup.querySelectorAll('.days-hours-changes ul')[0].style.color = obj.countDownColor;
 
       $popup.querySelectorAll('.notification-close-icon')[0].addEventListener('click', function () {
         $popup.style.display = 'none';
