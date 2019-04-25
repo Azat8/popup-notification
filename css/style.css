@@ -1424,7 +1424,7 @@ body .yellow-theme .left-side {
 /*no theme*/
 
 .no-theme p {
-    width: 90%;
+    padding: 0 3px;
 }
 .no-theme p:after{
     top: 0;
